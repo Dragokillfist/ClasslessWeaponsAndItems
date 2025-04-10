@@ -1,0 +1,46 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	Classless: {
+		DisplayName: Classless
+		Tooltip:
+			'''
+			Template of an item
+			Replacing this tooltip is duty 
+			It's snowing on Mt.Fuji
+			'''
+	}
+
+	CopperThing: {
+		DisplayName: Copper Thing
+		Tooltip: I dont know, probably some neat sword from the future
+	}
+
+	DefaultStick: {
+		DisplayName: Default Stick
+		Tooltip:
+			'''
+			Nothing special
+			why did you waste you wood on this thing?!?!?
+			'''
+	}
+
+	IronRod: {
+		DisplayName: Iron Rod
+		Tooltip: A rather clean Peice of metal we have here
+	}
+
+	MetalBall: {
+		DisplayName: Metal Ball
+		Tooltip:
+			'''
+			Just a Metal ball"
+			"What else were you expecting...
+			'''
+	}
+
+	SlimeFist: {
+		Tooltip: ""
+		DisplayName: Slime Fist
+	}
+}
