@@ -73,6 +73,14 @@ Items: {
 		DisplayName: Stick
 		Tooltip: ""
 	}
+
+	SlimeBall: {
+		DisplayName: Slime Ball
+		Tooltip: ""
+	}
 }
 
-Projectiles.SlimeBall.DisplayName: Slime Ball
+Projectiles: {
+	SlimeBall.DisplayName: Slime Ball
+	SlimeBallProjectile.DisplayName: Slime Ball Projectile
+}
