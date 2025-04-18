@@ -2,8 +2,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ClasslessWeapons.Content.Items.Classless
-{
+namespace ClasslessWeaponsAndItems.Content.Items
+{ 
     public class DefaultStick : ModItem
     {
         public override void SetDefaults()

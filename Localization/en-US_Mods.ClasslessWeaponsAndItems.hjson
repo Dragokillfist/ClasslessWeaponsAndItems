@@ -1,0 +1,78 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Mods: {
+	ClasslessWeaponsAndItems: {
+		Items: {
+			Stick: {
+				DisplayName: Stick
+				Tooltip:
+					'''
+					Template of an item
+					Replacing this tooltip is duty 
+					It's snowing on Mt.Fuji
+					'''
+			}
+
+			CopperThing: {
+				DisplayName: Copper Thing
+				Tooltip: ""
+			}
+
+			DefaultStick: {
+				DisplayName: Default Stick
+				Tooltip: ""
+			}
+
+			IronRod: {
+				DisplayName: Iron Rod
+				Tooltip: ""
+			}
+
+			MetalBall: {
+				DisplayName: Metal Ball
+				Tooltip: ""
+			}
+
+			SlimeFist: {
+				DisplayName: Slime Fist
+				Tooltip: Acquired from a rather slimey foe?
+			}
+		}
+
+		DropConditions.SlimeKingFist: Drops from slime king
+	}
+}
+
+Items: {
+	CopperThing: {
+		DisplayName: Copper Thing
+		Tooltip: ""
+	}
+
+	DefaultStick: {
+		DisplayName: Default Stick
+		Tooltip: ""
+	}
+
+	IronRod: {
+		DisplayName: Iron Rod
+		Tooltip: ""
+	}
+
+	MetalBall: {
+		DisplayName: Metal Ball
+		Tooltip: ""
+	}
+
+	SlimeFist: {
+		DisplayName: Slime Fist
+		Tooltip: ""
+	}
+
+	Stick: {
+		DisplayName: Stick
+		Tooltip: ""
+	}
+}
+
+Projectiles.SlimeBall.DisplayName: Slime Ball

@@ -1,0 +1,3 @@
+displayName = Classless Weapons and Items
+author = Dragokillfist
+version = 0.1
