@@ -1,3 +1,4 @@
+using ClasslessWeaponsAndItems.Content.Items;
 using System;
 using System.Linq;
 using Terraria;
@@ -14,13 +15,7 @@ namespace ClasslessWeaponsAndItems.Common.GlobalItems
 			if (item.type == ItemID.KingSlimeBossBag) {
 				// The following code is attempting to retrieve the ItemDropRule found in the ItemDropDatabase.RegisterBossBags method:
 				// RegisterToItem(item, ItemDropRule.OneFromOptionsNotScalingWithLuck(1, ItemID.BeeGun, ItemID.BeeKeeper, ItemID.BeesKnees));
-				foreach (var rule in itemLoot.Get()) {
-					if (rule is OneFromOptionsNotScaledWithLuckDropRule oneFromOptionsDrop && oneFromOptionsDrop.dropIds.Contains(ItemID.RoyalGel)) {
-						var original = oneFromOptionsDrop.dropIds.ToList();
-						original.Add(ModContent.ItemType<Content.Items.SlimeFist>());
-						oneFromOptionsDrop.dropIds = original.ToArray();
-					}
-				}
+				itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<SlimeFist>(), 1, 1, 1));
 			}
 		}
 	}

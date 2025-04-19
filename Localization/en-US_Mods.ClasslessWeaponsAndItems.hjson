@@ -76,7 +76,7 @@ Items: {
 
 	SlimeBall: {
 		DisplayName: Slime Ball
-		Tooltip: ""
+		Tooltip: "Acquired from a rather slimey foe?"
 	}
 }
 
@@ -84,3 +84,14 @@ Projectiles: {
 	SlimeBall.DisplayName: Slime Ball
 	SlimeBallProjectile.DisplayName: Slime Ball Projectile
 }
+
+Prefixes: {
+	PowerTooltip: insert cool text here
+
+	GenericPrefix: {
+		AdditionalTooltip: insert cool AdditionalTooltip text here
+		DisplayName: Cool prefix
+	}
+}
+
+DamageClasses.GenericDamageClass.DisplayName: Default Damage

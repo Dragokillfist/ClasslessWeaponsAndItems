@@ -14,13 +14,14 @@ namespace ClasslessWeaponsAndItems.Content.Projectiles
 	{
         public override void SetDefaults()
         {
-            Projectile.arrow = true;
+            Projectile.arrow = false;
 			Projectile.width = 20; // Width of the projectile hitbox
 			Projectile.height = 20; // Height of the projectile hitbox
 			Projectile.friendly = true; // Can hit enemies
 			//Projectile.aiStyle = 24;
 			Projectile.DamageType = DamageClass.Generic; // Damage type of the projectile
-			//AIType = ProjectileID.SpikyBall;
+			AIType = ProjectileID.SpikyBall;
+			Projectile.timeLeft = 600; // Time before the projectile despawns
         }
 
 		public override void AI() {
@@ -39,31 +40,28 @@ namespace ClasslessWeaponsAndItems.Content.Projectiles
 			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 
 			// Cap downward velocity
-			if (Projectile.velocity.Y > 16f) {
-				Projectile.velocity.Y = 16f;
+			if (Projectile.velocity.Y > 160f) {
+				Projectile.velocity.Y = 160;
 			}
 		}
+		public override bool OnTileCollide(Vector2 oldVelocity) {
+			// The projectile will bounce off tiles, but not if it is moving too slowly
+			if (Projectile.velocity.X > 1f || Projectile.velocity.X < -1f || Projectile.velocity.Y > 1f || Projectile.velocity.Y < -1f) {
+				Projectile.velocity.X = oldVelocity.X * 0.5f;
+				Projectile.velocity.Y = oldVelocity.Y * -0.5f;
+			}
+			return false; // Return false to prevent the default tile collision behavior
+		}
 
-		public override void OnKill(int timeLeft) {
+		/*public override void OnKill(int timeLeft) {
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position); // Plays the basic sound most projectiles make when hitting blocks.
-			for (int i = 0; i < 5; i++) // Creates a splash of dust around the position the projectile dies.
+			for (int i = 0; i > 500; i++) // Creates a splash of dust around the position the projectile dies.
 			{
 				Dust dust = Dust.NewDustDirect(Projectile.position, Projectile.width, Projectile.height, DustID.Silver);
 				dust.noGravity = true;
 				dust.velocity *= 1.5f;
 				dust.scale *= 0.9f;
 			} 
-		}
-		public override bool OnTileCollide(Vector2 oldVelocity) {
-			// The projectile will bounce off tiles, but not if it is moving too slowly
-			if (Projectile.velocity.X > 1f || Projectile.velocity.X < -1f || Projectile.velocity.Y > 1f || Projectile.velocity.Y < -1f) {
-				Projectile.velocity.X = oldVelocity.X * -0.5f;
-				Projectile.velocity.Y = oldVelocity.Y * -0.5f;
-			}
-			else {
-				Projectile.Kill();
-			}
-			return false; // Return false to prevent the default tile collision behavior
-		}
+		}*/
 	}
 }

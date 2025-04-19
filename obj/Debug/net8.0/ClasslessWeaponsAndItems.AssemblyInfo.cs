@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClasslessWeaponsAndItems")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1ee57f62fa20af8c05991c30f8232c21023015b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17c75ab301af85d5ba24c4e10499b0bd1010d40e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClasslessWeaponsAndItems")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClasslessWeaponsAndItems")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

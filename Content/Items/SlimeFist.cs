@@ -1,4 +1,5 @@
 using ClasslessWeaponsAndItems.Content.Projectiles;
+using ClasslessWeaponsAndItems.Common.DamageClasses;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -22,10 +23,10 @@ namespace ClasslessWeaponsAndItems.Content.Items
             Item.UseSound = SoundID.Item1; // Sound played when using the item
             Item.autoReuse = true; // Whether the item can be auto-swung or not
             Item.damage = 38; // Damage dealt by the item
-            Item.DamageType = DamageClass.Generic; // Damage type of the item
+            Item.DamageType = ModContent.GetInstance<Common.DamageClasses.GenericDamageClass>(); // Damage type of the item
             Item.shoot = ModContent.ProjectileType<Projectiles.SlimeBallProjectile>(); // Projectile type spawned when using the item
             Item.shootSpeed = 10f; // Speed of the projectile spawned
-			Item.useAmmo = ModContent.ItemType<SlimeBall>(); // Ammo type used by the item
+			//Item.useAmmo = ModContent.ItemType<SlimeBall>(); // Ammo type used by the item
         }
 /*
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {

@@ -9,7 +9,7 @@ namespace ClasslessWeaponsAndItems.Content.Items
         public override void SetDefaults()
         {
             Item.damage = 15;
-            Item.DamageType = DamageClass.Generic;
+            Item.DamageType = ModContent.GetInstance<Common.DamageClasses.GenericDamageClass>();
             Item.width = 20;
             Item.height = 20;
             Item.useTime = 15;

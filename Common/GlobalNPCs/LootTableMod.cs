@@ -24,7 +24,6 @@ namespace ClasslessWeaponsAndItems.Common.GlobalNPCs
 
             // Example: Add a drop to the Eye of Cthulhu
             if (npc.type == NPCID.KingSlime) {
-                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SlimeFist>(), 1, 1, 1));
             }
         }
     }
