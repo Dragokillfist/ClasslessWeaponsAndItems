@@ -76,7 +76,7 @@ Items: {
 
 	SlimeBall: {
 		DisplayName: Slime Ball
-		Tooltip: "Acquired from a rather slimey foe?"
+		Tooltip: Acquired from a rather slimey foe?
 	}
 }
 
